@@ -19,12 +19,14 @@ body {
 
 #main {
   position: relative;
-  display: flex;
-  flex-direction: column;
+
+  overflow: hidden;
 }
 
 #main-element {
-  max-width: 100%;
+  margin-left: 50%;
+  transform: translateX(-50%);
+  max-width: 140vw;
   height: auto;
   max-height: 700px;
 }
@@ -32,14 +34,14 @@ body {
 .socialIcons {
  display:flex;
  position: absolute;
- bottom:3%;
+ bottom:6%;
  left: 50%;
  transform: translate(-50%, -50%);
 }
 
 .socialIcons a {
   color: white;
-  font-size: 10vw;
+  font-size: 8vw;
 }
 
 .socialIcons a:nth-child(1) {
@@ -57,11 +59,17 @@ body {
   right: 10px;
 }
 
-@media only screen and (min-width: 641px) {
-  .socialIcons a {
-    font-size: 7vw;
+@media only screen and (min-width: 550px) {
+  .socialIcons {
+   display:flex;
+   position: absolute;
+   bottom:4%;
+   left: 50%;
+   transform: translate(-50%, -50%);
   }
-
+  .socialIcons a {
+    font-size: 48px;
+  }
 }
 
 @media only screen and (min-width: 700px) {
