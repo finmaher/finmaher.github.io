@@ -57,7 +57,7 @@ body {
   right: 10px;
 }
 
-@media only screen and (min-width: 501px) {
+@media only screen and (min-width: 641px) {
   .socialIcons a {
     font-size: 7vw;
   }
