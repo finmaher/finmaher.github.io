@@ -28,7 +28,7 @@ body {
   transform: translateX(-50%);
   max-width: 140vw;
   height: auto;
-  max-height: 700px;
+  max-height: 500px;
 }
 
 .socialIcons {
@@ -59,15 +59,15 @@ body {
   right: 10px;
 }
 
-@media only screen and (min-width: 550px) {
+@media only screen and (min-width: 390px) {
   .socialIcons {
    display:flex;
    position: absolute;
-   bottom:4%;
+   bottom:3%;
 
   }
   .socialIcons a {
-    font-size: 48px;
+    font-size: 40px;
   }
 }
 
@@ -77,6 +77,6 @@ body {
    transform: translate(-50%, -50%);
   }
   .socialIcons a {
-    font-size: 48px;
+    font-size: 40px;
   }
 }
