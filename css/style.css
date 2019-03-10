@@ -30,7 +30,7 @@ header {
 #navbar {
   display: flex;
   justify-content: space-around;
-  
+
   position: inherit;
   width:100%;
 }
@@ -57,7 +57,7 @@ header {
   background: lightgrey;
   height: 100vh;
   max-height: 100vh;
-  
+
 }
 
 #welcome-section h1 {
@@ -75,22 +75,20 @@ header {
 
 #booking-section {
   display: flex;
-  justify-content: flex-end;
   align-items: center;
   color: black;
   text-align: center;
   background: lightgrey;
   height: 100vh;
-  max-height: 100vh;
+
 }
 
 #book-now {
-  display: flex;
-  flex-direction: column;
+  
 }
 
 label:nth-child(odd) {
-  
+
 }
 
 label {
@@ -101,7 +99,7 @@ label {
 
 input {
   background-color: #e3e3e3;
-  font-size:5vw; 
+  font-size:5vw;
   border: none;
 }
 
@@ -157,9 +155,9 @@ input {
   font-size: 22px;
   }
   input {
-  font-size:22px; 
+  font-size:22px;
   }
   #submit {
     margin-top: 20px;
   }
-} 
+}
