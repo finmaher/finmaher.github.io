@@ -74,31 +74,23 @@ header {
 }
 
 #booking-section {
-  display: flex;
-  align-items: center;
-  color: black;
-  text-align: center;
+  position: relative;
+  overflow: hidden;
+  padding-top: 16px;
   background: lightgrey;
+}
+
+.resp-iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
 }
 
 #book-now {
 
-}
-
-label:nth-child(odd) {
-
-}
-
-label {
-  background-color: #e3e3e3;
-  margin-bottom: 20px;
-  font-size: 5vw;
-}
-
-input {
-  background-color: #e3e3e3;
-  font-size:5vw;
-  border: none;
 }
 
 #profile {
@@ -116,27 +108,6 @@ input {
   color:#ba1000;
 }
 
-#submit {
-  display: block;
-  cursor:pointer;
-  color: black;
-  margin: auto;
-  width: 200px;
-  background-color: transparent;
-  box-shadow: 1px 1px 2px #ba1000;
-  padding: 10px 20px 10px 20px;
-  border: 4px solid grey;
-  font-size: 18px;
-  font-family: "Open Sans",arial,x-locale-body,sans-serif;
-  -webkit-transition: box-shadow .3s, background-color .3s; /* Safari */
-   transition: box-shadow .3s, background-color .3s;
-}
-#submit:hover {
-  box-shadow: 0px 0px 0px #888888;
-  background-color: #lightgrey;
-  color:#ba1000;
-}
-
 #to-top {
   position: fixed;
   z-index: 100;
@@ -144,18 +115,6 @@ input {
   right:0;
 }
 
-@media only screen and (min-width: 848px) {
-  #contact-form {
-  display: block;
-  }
-  label {
-  margin-left: 20px;
-  font-size: 22px;
-  }
-  input {
-  font-size:22px;
-  }
-  #submit {
-    margin-top: 20px;
-  }
+@media only screen and (min-width: 640px) {
+
 }
