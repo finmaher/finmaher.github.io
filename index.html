@@ -3,78 +3,180 @@
 
 <head>
   <meta charset="UTF-8">
+  <title>FCC: Technical Documentation Final</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Donald Glover | Childish Gambino</title>
-  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.css'>
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+<title>Technical Document</title>
+  
+  
+      <link rel="stylesheet" href="css/style.css">
+
+  
 </head>
 
 <body>
-    <div id="main">
-      <header>
-        <div class="container">
-          <div id="title">
-            <h1>&nbsp;&nbsp;| Donald Glover |&nbsp;&nbsp;</h1>
-            <h1>&nbsp;&nbsp;| Childish Gambino |&nbsp;&nbsp;</h1>
-          </div>
-        </div>
-      </header>
 
-      <section id="showcase">
-        <div class="container" id="img-div">
-          <figure>
-            <img id="image" src="https://img.thedailybeast.com/image/upload/c_crop,d_placeholder_euli9k,h_1687,w_3000,x_0,y_0/dpr_2.0/c_limit,w_740/fl_lossy,q_auto/v1492101180/articles/2016/12/03/donald-glover-s-revolution-will-be-televised/161204-stereo-donald-glover-tease_bulke9" alt="Still from Donald Glover's show Atlanta">
-            <figcaption id="img-caption">Glover from a scene in his award-winning series, Atlanta.</figcaption>
-          </figure>
-        </div>
+  <head>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+</head>
+
+<div class="container-fluid">
+  
+    <!-- navigation -->
+  
+    <nav id="navbar">
+      <div>
+      <header>Window sizes and scrolling</header>
+      </div>
+      <div id="nav">
+      <a class="nav-link" href="#Width/height_of_the_window">Width/height of the window</a>
+      <a class="nav-link" href="#Width/height_of_the_document">Width/height of the document</a>
+      <a class="nav-link" href="#Get_the_current_scroll">Get the current scroll</a>
+      <a class="nav-link" href="#Scrolling:_scrollTo,_scrollBy,_scrollIntoView">Scrolling: scrollTo, scrollBy, scrollIntoView</a>
+      <a class="nav-link" href="#scrollIntoView">scrollIntoView</a>
+      <a class="nav-link" href="#Forbid_the_scrolling">Forbid the scrolling</a>
+      <a class="nav-link" href="#Summary">Summary</a>
+        <div>
+    </nav>
+
+      <!-- main body of document -->
+  <div class="container">
+    <main id="main-doc">
+      
+      <header><h1>Window sizes and scrolling</h1></header>
+      <p>How to find out the width of the browser window? How to get the full height of the document, including the scrolled out part? How to scroll the page using JavaScript?</p>
+      <p>From the DOM point of view, the root document element is document.documentElement. That element corresponds to &lt;html&gt; and has geometry properties described in the previous chapter. For some cases we can use it, but there are additional methods and peculiarities important enough to consider.</p>
+      
+      <section class="main-section" id="Width/height_of_the_window">
+        <header><h2>Width/height of the window</h2></header>
+        <p>Properties clientWidth/clientHeight of document.documentElement is exactly what we want here:</p>
+        <img src="http://javascript.info/article/size-and-scroll-window/document-client-width-height.png">
+        <p>For instance, this button shows the height of your window:</p>
+        <p><button onclick="alert(document.documentElement.clientHeight)">alert(document.documentElement.clientHeight)</button></p>
+        
+        <h4>Not window.innerWidth/Height</h4>
+        <p>Browsers also support properties window.innerWidth/innerHeight. They look like what we want. So what’s the difference?</p>
+        <p>If there’s a scrollbar occupying some space, clientWidth/clientHeight provide the width/height inside it. In other words, they return width/height of the visible part of the document, available for the content.</p>
+        <p>And window.innerWidth/innerHeight ignore the scrollbar.</p>
+        <p>If there’s a scrollbar, and it occupies some space, then these two lines show different values:</p>
+        <code>alert( window.innerWidth ); // full window width</code><br><code>
+alert( document.documentElement.clientWidth ); // window width minus the scrollbar</code>
+        <p>In most cases we need the available window width: to draw or position something. That is: inside scrollbars if there are any. So we should use documentElement.clientHeight/Width.</p>
+        
+        <h4>DOCTYPE is important</h4>
+        <p>Please note: top-level geometry properties may work a little bit differently when there’s no <!DOCTYPE HTML> in HTML. Odd things are possible.</p>
+        <p>In modern HTML we should always write DOCTYPE. Generally that’s not a JavaScript question, but here it affects JavaScript as well.</p>
       </section>
-
-      <section id="tribute-info">
-        <div class="container wrapper">
-            <article id="bio">
-              <h2>| What About Donald? |</h2>
-              <p>Called “the most prolific creator of his generation,” Donald Glover is the brain child behind the FX TV comedy <a href="https://en.wikipedia.org/wiki/Atlanta_(TV_series)" id="tribute-link" target="_blank">Atlanta</a>. He not only stars in the show but also serves as its creator, producer, director and co-writer. Outside of his work on Atlanta, Glover is also a raps under the name Childish Gambino.</p>
-
-              <p>In 2017, Glover took a prominent role for the upcoming Star Wars movie – Solo: A Star Wars Story. Due to be released in 2018, the film traces the early life of intergalactic pilot and warrior Han Solo, the character first made famous by Harrison Ford. In the new Solo movie, Glover plays the young Lando Calrissian, who was played originally by Billy Dee Williams in The Empire Strikes Back in 1980.</p>
-
-    <p>Glover’s voice will be heard in another high-profile feature film – a CGI-animated remake of The Lion King due to be released in 2019. Glover is voicing the character of Simba.</p>
-
-              <p>His affinity for referencing his own life experiences has garnered him comparisons to Drake, but his witty humor and obscure cultural references set him apart. Glover reveals his struggles through his lyrics, his thoughts on race and identity, while at the same time reminding you that he’s one of the best in the game right now- even if he’s wearing shorts.</p>
-
-              <p>Childish Gambino Says:</p>
-
-    <blockquote>"I feel like Kanye paved the way for people like Drake, Wiz Khalifa, and rappers who rap about their life. Not every rapper is from the streets. Jay Z’s story is not my story and I say that in the album. I love Jay Z, but I can’t tell that story."</blockquote>
-            </article>
-            <aside id="music">
-              <h3>| The Music |</h3>
-              <ul>
-                <li><a class="test-popup-link" href="https://www.youtube.com/watch?v=jx96Twg-Aew" id="tribute-link"><i class="far fa-play-circle"></i>&nbsp;&nbsp;&nbsp;Sober</a></li>
-                <li><a class="test-popup-link" href="https://www.youtube.com/watch?v=VYOjWnS4cMY" id="tribute-link"><i class="far fa-play-circle"></i>&nbsp;&nbsp;&nbsp;This Is America</a></li>
-                <li><a class="test-popup-link" href="https://www.youtube.com/watch?v=ZIEgfEIdEag" id="tribute-link"><i class="far fa-play-circle"></i>&nbsp;&nbsp;&nbsp;Terrified</a></li>
-                <li><a class="test-popup-link" href="https://www.youtube.com/watch?v=Kp7eSUU9oy8" id="tribute-link"><i class="far fa-play-circle"></i>&nbsp;&nbsp;&nbsp;Redbone</a></li>
-                <li><a class="test-popup-link" href="https://www.youtube.com/watch?v=diLp6hUqvVk" id="tribute-link"><i class="far fa-play-circle"></i>&nbsp;&nbsp;&nbsp;Summertime Magic</a></li>
-                <li><a class="test-popup-link" href="https://www.youtube.com/watch?v=_hZCsgcKa-g" id="tribute-link"><i class="far fa-play-circle"></i>&nbsp;&nbsp;&nbsp;Me and Your Mama</a></li>                
-              </ul>
-            </aside>
-        </div>
+      <section class="main-section" id="Width/height_of_the_document">
+        <header><h2>Width/height of the document</h2></header>
+        <p>Theoretically, as the root document element is documentElement.clientWidth/Height, and it encloses all the content, we could measure its full size as documentElement.scrollWidth/scrollHeight.</p>
+        <p>These properties work well for regular elements. But for the whole page these properties do not work as intended. In Chrome/Safari/Opera if there’s no scroll, then documentElement.scrollHeight may be even less than documentElement.clientHeight! For regular elements that’s a nonsense.</p>
+        <p>To have a reliable full window size, we should take the maximum of these properties:</p>
+        
+        <code>let scrollHeight = Math.max(</code><br>
+        <code>  document.body.scrollHeight, document.documentElement.scrollHeight,
+</code><br>
+        <code>  document.body.offsetHeight, document.documentElement.offsetHeight,
+</code><br>
+        <code>  document.body.clientHeight, document.documentElement.clientHeight
+</code><br>
+        <code>);
+</code><br>
+        <code>alert('Full document height, with scrolled out part: ' + scrollHeight);
+</code>
+        
+        <p>Why so? Better don’t ask. These inconsistencies come from ancient times, not a “smart” logic.</p>
       </section>
-
-      <footer id="footer">
-        <div class="container">
-          <h4>&copy; 2018 Fintan Maher</h4>
-
-        </div>
-      </footer>
-
-    </div>
-
-    <!-- Scripts -->
-
-    <!--<script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>-->
-    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
-    <script src='https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js'></script>
-    <script  src="js/index.js"></script>
+      <section class="main-section" id="Get_the_current_scroll">
+        <header><h2>Get the current scroll</h2></header>
+        <p>Regular elements have their current scroll state in elem.scrollLeft/scrollTop.</p>
+        <p>What’s with the page? Most browsers provide documentElement.scrollLeft/Top for the document scroll, but Chrome/Safari/Opera have bugs (like 157855, 106133) and we should use document.body instead of document.documentElement there.</p>
+        <p>Luckily, we don’t have to remember these peculiarities at all, because of the special properties window.pageXOffset/pageYOffset:</p>
+        
+        <code>alert('Current scroll from the top: ' + window.pageYOffset);
+</code><br>
+        <code>alert('Current scroll from the left: ' + window.pageXOffset);
+</code>
+        <p>These properties are read-only.</p>
+      </section>
+      <section class="main-section" id="Scrolling:_scrollTo,_scrollBy,_scrollIntoView">
+        <header><h2>Scrolling: scrollTo, scrollBy, scrollIntoView</h2></header>
+        <h4>Important:</h4>
+        <p>To scroll the page from JavaScript, its DOM must be fully built.</p>
+        <p>For instance, if we try to scroll the page from the script in &lt;head&gt;, it won’t work.</p>
+        
+        <p>Regular elements can be scrolled by changing scrollTop/scrollLeft.</p>
+        <p>We can do the same for the page:</p>
+          <ul>
+            <li>For all browsers except Chrome/Safari/Opera: modify document.documentElement.scrollTop/Left.</li>
+            <li>In Chrome/Safari/Opera: use document.body.scrollTop/Left instead.</li>
+          </ul>
+        <p>It should work, but smells like cross-browser incompatibilities. Not good. Fortunately, there’s a simpler, more universal solution: special methods window.scrollBy(x,y) and window.scrollTo(pageX,pageY).</p>
+          <ul>
+            <li><p>The method scrollBy(x,y) scrolls the page relative to its current position. For instance, scrollBy(0,10) scrolls the page 10px down.</p>
+              <p>The button below demonstrates this:</p>
+              <p><button onclick="window.scrollBy(0,10)">window.scrollBy(0,10)</button></p></li>
+            <li><p>The method scrollTo(pageX,pageY) scrolls the page relative to the document top-left corner. It’s like setting scrollLeft/scrollTop.</p>
+              <p>To scroll to the very beginning, we can use scrollTo(0,0).</p>
+              <p><button onclick="window.scrollTo(0,0)">window.scrollTo(0,0)</button></p></li>
+          </ul>
+        <p>These methods work for all browsers the same way.</p>
+      </section>
+      <section class="main-section" id="scrollIntoView">
+        <header><h2>scrollIntoView</h2></header>
+        <p>For completeness, let’s cover one more method: elem.scrollIntoView(top).</p>
+        <p>The call to elem.scrollIntoView(top) scrolls the page to make elem visible. It has one argument:</p>
+          <ul>
+            <li>if top=true (that’s the default), then the page will be scrolled to make elem appear on the top of the window. The upper edge of the element is aligned with the window top.</li>
+            <li>if top=false, then the page scrolls to make elem appear at the bottom. The bottom edge of the element is aligned with the window bottom.</li>
+          </ul>
+        <p></p>
+        <p></p>
+      </section>
+      <section class="main-section" id="Forbid_the_scrolling">
+        <header><h2>Forbid the scrolling</h2></header>
+        <p>Sometimes we need to make the document “unscrollable”. For instance, when we need to cover it with a large message requiring immediate attention, and we want the visitor to interact with that message, not with the document.</p>
+        <p>To make the document unscrollable, its enough to set document.body.style.overflow = "hidden". The page will freeze on its current scroll.</p>
+        <p>Try it:</p>
+        <p><button onclick="document.body.style.overflow = 'hidden'"><code>document.body.style.overflow = 'hidden'</code></button></p>
+        <p><button onclick="document.body.style.overflow = ''"><code>document.body.style.overflow = ''</code></button></p>
+        <p>The first button freezes the scroll, the second one resumes it.</p>
+        <p>We can use the same technique to “freeze” the scroll for other elements, not just for document.body.</p>
+        <p>The drawback of the method is that the scrollbar disappears. If it occupied some space, then that space is now free, and the content “jumps” to fill it.</p>
+        <p>That looks a bit odd, but can be worked around if we compare clientWidth before and after the freeze, and if it increased (the scrollbar disappeared) then add padding to document.body in place of the scrollbar, to keep the content width same.</p>
+      </section>
+      <section class="main-section" id="Summary">
+        <header><h2>Summary</h2></header>
+        <p>Geometry:</p>
+          <ul>
+            <li>Width/height of the visible part of the document (content area width/height): document.documentElement.clientWidth/Height</li>
+            <li>Width/height of the whole document, with the scrolled out part:</li>
+        </ul>
+          <code>let scrollHeight = Math.max(
+</code><br>
+          <code>  document.body.scrollHeight, document.documentElement.scrollHeight,
+</code><br>
+          <code>  document.body.offsetHeight, document.documentElement.offsetHeight,
+</code><br>
+          <code>  document.body.clientHeight, document.documentElement.clientHeight
+</code><br>
+          <code>);
+</code>
+        <p>Scrolling:</p>
+          <ul>
+            <li>Read the current scroll: window.pageYOffset/pageXOffset.</li>
+            <li>Change the current scroll:</li>
+            <ul>
+              <li>window.scrollTo(pageX,pageY) – absolute coordinates,</li>
+              <li>window.scrollBy(x,y) – scroll relative the current place,</li>
+              <li>elem.scrollIntoView(top) – scroll to make elem visible (align with the top/bottom of the window).</li>
+            </ul>
+        </ul>
+      </section>
+    </main>
+  </div> <!-- End of container -->
+</div> <!-- End of container -->
+  
+  
 
 </body>
 
