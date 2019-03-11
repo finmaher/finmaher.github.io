@@ -71,11 +71,14 @@ header {
   align-items: center;
 }
 
-#booking-section {
+.lightgrey {
+  background: lightgrey;
+}
+
+.bookingSection {
   position: relative;
   overflow: hidden;
   padding-top: 16px;
-  background: lightgrey;
 }
 
 .resp-iframe {
