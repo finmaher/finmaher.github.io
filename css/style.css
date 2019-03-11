@@ -56,6 +56,7 @@ header {
   background: lightgrey;
   height: 100vh;
   max-height: 100vh;
+  
 }
 
 #welcome-section h1 {
@@ -71,38 +72,13 @@ header {
   align-items: center;
 }
 
-.lightgrey {
+#booking-section {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  color: black;
+  text-align: center;
   background: lightgrey;
-}
-
-.bookingSection {
-  position: relative;
-  overflow: hidden;
-  padding-top: 16px;
-}
-
-.resp-iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  border: 0;
-}
-
-#profile {
-  padding: 20px;
-}
-#profile-link {
-  font-size: 48px;
-  color: #696664;;
-  text-decoration: none;
-  -webkit-transition: color .3s; /* Safari */
-  transition: color .3s;
-}
-
-#profile-link:hover {
-  color:#ba1000;
 }
 
 #to-top {
@@ -113,5 +89,5 @@ header {
 }
 
 @media only screen and (min-width: 640px) {
-
-}
+  
+} 
