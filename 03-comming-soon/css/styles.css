@@ -3,16 +3,16 @@
 ====================================================
 
 * 	[Master Stylesheet]
-	
-	Theme Name :  
-	Version    :  
-	Author     :  
-	Author URI :  
+
+	Theme Name :
+	Version    :
+	Author     :
+	Author URI :
 
 ====================================================
 
 	TOC
-	
+
 	1. PRIMARY STYLES
 	2. COMMONS FOR PAGE DESIGN
 		JQUERY LIGHT BOX
@@ -28,7 +28,7 @@ html{ font-size: 100%; height: 100%; width: 100%; overflow-x: hidden; margin: 0p
 
 
 body{ font-size: 16px; font-family: 'Open Sans', sans-serif; width: 100%; height: 100%; margin: 0; font-weight: 400;
-	-webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; word-wrap: break-word; overflow-x: hidden; 
+	-webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; word-wrap: break-word; overflow-x: hidden;
 	color: #333; }
 
 h1, h2, h3, h4, h5, h6, p, a, ul, span, li, img, inpot, button{ margin: 0; padding: 0; }
@@ -50,7 +50,7 @@ a, button{ display: inline-block; text-decoration: none; color: inherit; transit
 
 a:focus, a:active, a:hover,
 button:focus, button:active, button:hover,
-a b.light-color:hover{ text-decoration: none; color: #E45F74; }
+a b.light-color:hover{ text-decoration: none; color: /*#E45F74*/ #9C937F; }
 
 b{ font-weight: 500; }
 
@@ -75,14 +75,14 @@ b.light-color{ color: #444; }
 
 *, *::before, *::after {
     -webkit-box-sizing: inherit;
-	box-sizing: inherit;} 
+	box-sizing: inherit;}
 
-	
+
 /* ---------------------------------
 2. COMMONS FOR PAGE DESIGN
 --------------------------------- */
 
-.center-text{ text-align: center; } 
+.center-text{ text-align: center; }
 
 .display-table{ display: table; height: 100%; width: 100%; }
 
@@ -112,13 +112,13 @@ b.light-color{ color: #444; }
 
 .main-area{ position: relative; height: 100vh; z-index: 1; padding: 0 20px; background-size: cover; color: #fff; }
 
-.main-area:after{ content:''; position: absolute; top: 0; bottom: 0;left: 0; right: 0; z-index: -1;  
+.main-area:after{ content:''; position: absolute; top: 0; bottom: 0;left: 0; right: 0; z-index: -1;
 	opacity: .4; background: #000; }
 
 .main-area .desc{ margin: 20px auto; max-width: 500px; }
-	
-.main-area .notify-btn{ padding: 13px 35px; border-radius: 50px; border: 2px solid #F84982;
-	color: #fff; background: #F84982; }
+
+.main-area .notify-btn{ padding: 13px 35px; border-radius: 50px; border: 2px solid #9C937F;
+	color: #fff; background: #9C937F; }
 
 .main-area .notify-btn:hover{ background: none; }
 
@@ -126,9 +126,8 @@ b.light-color{ color: #444; }
 
 .main-area .social-btn > li > a{ margin: 0 10px; padding-bottom: 7px; position: relative; overflow: hidden; }
 
-.main-area .social-btn > li > a:after{ content:''; position: absolute; bottom: 0; left: 0; right: 0; 
-	transition: all .2s; height: 2px; background: #F84982; }
+.main-area .social-btn > li > a:after{ content:''; position: absolute; bottom: 0; left: 0; right: 0;
+	transition: all .2s; height: 2px; background: #9C937F; }
 
-	
+
 .main-area .social-btn > li > a:hover:after{ transform: translateX(100%); }
-
