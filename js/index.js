@@ -27,7 +27,7 @@ copyCodeBtn.addEventListener('click', function(event)
     }
 
     const resetToolTip = () => toolTip.setAttribute('tooltip', 'Click to copy email address')
-    setTimeout(resetToolTip, 1000);
+    setTimeout(resetToolTip, 4000);
 
 
     // Remove the selections - NOTE: Should use
