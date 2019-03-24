@@ -139,7 +139,7 @@ b.light-color{ color: #444; }
     border-style: solid;
     border-color: rgba(0,0,0,0.7) transparent transparent transparent;
 		-webkit-transition: opacity 3s ease-in-out;
-    -moz-transition: opacity 3s ease-in out;
+    -moz-transition: opacity 3s ease-in-out;
     -o-transition: opacity 3s ease-in-out;
     transition: opacity 3s ease-in-out;
     z-index: 100;
@@ -159,7 +159,7 @@ b.light-color{ color: #444; }
     min-width: 80px;
     border-radius: 5px;
     pointer-events: none;
-		opacity: 0;
+		opacity: 0.0;
 }
 
 [tooltip-position='left']::before{
@@ -204,7 +204,7 @@ b.light-color{ color: #444; }
 }
 
 [tooltip]:hover::after,[tooltip]:hover::before {
-   opacity:1
+   opacity:1;
 }
 
 .main-area .social-btn{ position: absolute; bottom: 40px; width: 100%; left: 50%; transform: translateX(-50%); }
