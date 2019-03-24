@@ -110,7 +110,7 @@ b.light-color{ color: #444; }
 3. MAIN SECTION
 --------------------------------- */
 #code-to-copy {
-	visibility: hidden;
+	
 }
 
 .main-area{ position: relative; height: 100vh; z-index: 1; padding: 0 20px; background-size: cover; color: #fff; }
