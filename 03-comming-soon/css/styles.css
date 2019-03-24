@@ -139,11 +139,11 @@ b.light-color{ color: #444; }
     border-style: solid;
     border-color: rgba(0,0,0,0.7) transparent transparent transparent;
     z-index: 100;
-		-webkit-transition: opacity 1s ease-in-out;
-		-moz-transition: opacity 1s ease-in-out;
-		-o-transition: opacity 1s ease-in-out;
-		transition: opacity 1s ease-in-out;
-		opacity: 0.0;
+		-webkit-transition: opacity .5s ease-in-out;
+		-moz-transition: opacity .5s ease-in-out;
+		-o-transition: opacity .5s ease-in-out;
+		transition: opacity .5s ease-in-out;
+		opacity: 1;
 }
 [tooltip]::after {
     content: attr(tooltip);
@@ -159,11 +159,11 @@ b.light-color{ color: #444; }
     min-width: 80px;
     border-radius: 5px;
     pointer-events: none;
-		-webkit-transition: opacity 1s ease-in-out;
-		-moz-transition: opacity 1s ease-in-out;
-		-o-transition: opacity 1s ease-in-out;
-		transition: opacity 1s ease-in-out;
-		opacity: 0.0;
+		-webkit-transition: opacity 3s ease-in-out;
+		-moz-transition: opacity 3s ease-in-out;
+		-o-transition: opacity 3s ease-in-out;
+		transition: opacity 3s ease-in-out;
+		opacity: 1;
 }
 
 [tooltip-position='left']::before{
@@ -218,5 +218,25 @@ b.light-color{ color: #444; }
 .main-area .social-btn > li > a:after{ content:''; position: absolute; bottom: 0; left: 0; right: 0;
 	transition: all .2s; height: 2px; background: #AFA07A; }
 
-
 .main-area .social-btn > li > a:hover:after{ transform: translateX(100%); }
+
+@media only screen and (min-width: 992px) {
+	[tooltip]::before {
+  opacity:0;
+	}
+
+	[tooltip]::after {
+  opacity:0;
+	}
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+	[tooltip]::before {
+  opacity:0;
+	}
+
+	[tooltip]::after {
+  opacity:0;
+	}
+}
