@@ -128,11 +128,6 @@ b.light-color{ color: #444; }
 [tooltip]{
   margin:20px;
   position:relative;
-	-webkit-transition: opacity 1s ease-in-out;
-	-moz-transition: opacity 1s ease-in-out;
-	-o-transition: opacity 1s ease-in-out;
-	transition: opacity 1s ease-in-out;
-	opacity: 0.0;
 }
 [tooltip]::before {
     content: "";
@@ -144,6 +139,10 @@ b.light-color{ color: #444; }
     border-style: solid;
     border-color: rgba(0,0,0,0.7) transparent transparent transparent;
     z-index: 100;
+		-webkit-transition: opacity 1s ease-in-out;
+		-moz-transition: opacity 1s ease-in-out;
+		-o-transition: opacity 1s ease-in-out;
+		transition: opacity 1s ease-in-out;
 		opacity: 0.0;
 }
 [tooltip]::after {
@@ -160,6 +159,10 @@ b.light-color{ color: #444; }
     min-width: 80px;
     border-radius: 5px;
     pointer-events: none;
+		-webkit-transition: opacity 1s ease-in-out;
+		-moz-transition: opacity 1s ease-in-out;
+		-o-transition: opacity 1s ease-in-out;
+		transition: opacity 1s ease-in-out;
 		opacity: 0.0;
 }
 
