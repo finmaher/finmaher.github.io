@@ -116,7 +116,7 @@ b.light-color{ color: #444; }
 .main-area{ position: relative; height: 100vh; z-index: 1; padding: 0 20px; background-size: cover; color: #fff; }
 
 .main-area:after{ content:''; position: absolute; top: 0; bottom: 0;left: 0; right: 0; z-index: -1;
-	opacity: .4; background: #000; }
+	opacity: .1; background: #000; }
 
 .main-area .desc{ margin: 20px auto; max-width: 500px; }
 
@@ -139,10 +139,6 @@ b.light-color{ color: #444; }
     border-style: solid;
     border-color: rgba(0,0,0,0.7) transparent transparent transparent;
     z-index: 100;
-		-webkit-transition: opacity .5s ease-in-out;
-		-moz-transition: opacity .5s ease-in-out;
-		-o-transition: opacity .5s ease-in-out;
-		transition: opacity .5s ease-in-out;
 		opacity: 1;
 }
 [tooltip]::after {
@@ -159,10 +155,10 @@ b.light-color{ color: #444; }
     min-width: 80px;
     border-radius: 5px;
     pointer-events: none;
-		-webkit-transition: opacity 3s ease-in-out;
-		-moz-transition: opacity 3s ease-in-out;
-		-o-transition: opacity 3s ease-in-out;
-		transition: opacity 3s ease-in-out;
+		-webkit-transition: opacity 1s cubic-bezier(0,.93,.79,.6);
+		-moz-transition: opacity 1s cubic-bezier(0,.93,.79,.6);
+		-o-transition: opacity 1s cubic-bezier(0,.93,.79,.6);
+		transition: opacity 1s cubic-bezier(0,.93,.79,.6);
 		opacity: 1;
 }
 

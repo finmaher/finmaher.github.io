@@ -4,6 +4,9 @@ const initContent = emailLink.textContent;
 
 copyCodeBtn.addEventListener('click', function(event)
 {
+   let toolTip = document.querySelector('#js-emailcopybtn');
+   toolTip.setAttribute('tooltip', 'Email address copied to clipboard!');
+
     // Select the email link anchor text
   emailLink.insertAdjacentText('beforeend','@me.com');
   emailLink = document.querySelector('#code-to-copy');
@@ -22,6 +25,10 @@ copyCodeBtn.addEventListener('click', function(event)
     {
         console.log('Oops, unable to copy');
     }
+
+    const resetToolTip = () => toolTip.setAttribute('tooltip', 'Click to copy email address')
+    setTimeout(resetToolTip, 1000);
+
 
     // Remove the selections - NOTE: Should use
     // removeRange(range) when it is supported
